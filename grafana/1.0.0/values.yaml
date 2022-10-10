@@ -1,0 +1,9 @@
+grafana:
+  adminPassword: "nutanix/4u"
+  namespaceOverride: grafana
+  ingress:
+    enabled: true
+    hosts:
+      - grafana.labo.nxlab.fr
+    annotations:
+      kubernetes.io/ingress.class: nginx

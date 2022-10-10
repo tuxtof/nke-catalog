@@ -1,0 +1,11 @@
+name: kube-vip
+description: kube-vip provides Kubernetes clusters with a load balancer for Kubernetes Services of type LoadBalancer without relying on any external hardware or software.
+icon: https://kube-vip.io/images/kube-vip.png
+namespace:
+  name: kube-system
+  editable: false
+parameters:
+  - name: range-global
+    path: range-global
+    description: "Range to assign IP (ex: 192.168.1.220-192.168.1.230)"
+    mandatory: true
