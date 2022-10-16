@@ -1,0 +1,150 @@
+{
+  "applications": [
+    {
+      "name": "kyverno",
+      "versions": [
+        {
+          "description": "Kubernetes Native Policy Management.",
+          "icon": "https://repository-images.githubusercontent.com/169108858/35923880-823a-11e9-9089-0c9c102f9e6f",
+          "namespace": {
+            "name": "kyverno-system",
+            "editable": false
+          },
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "lb",
+      "versions": [
+        {
+          "description": "kube-vip provides Kubernetes clusters with a load balancer for Kubernetes Services of type LoadBalancer without relying on any external hardware or software.",
+          "icon": "https://kube-vip.io/images/kube-vip.png",
+          "namespace": {
+            "name": "kube-system",
+            "editable": false
+          },
+          "parameters": [
+            {
+              "name": "range-global",
+              "path": "rangeGlobal",
+              "description": "Range to assign IP (ex: 192.168.1.220-192.168.1.230)",
+              "mandatory": true
+            },
+            {
+              "name": "interface",
+              "path": "interface",
+              "description": "Primary interface of the name",
+              "mandatory": false,
+              "default": "eth0"
+            }
+          ],
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "cert-manager",
+      "versions": [
+        {
+          "description": "X.509 certificate management for Kubernetes.",
+          "icon": "https://avatars.githubusercontent.com/u/39950598?s=280\u0026v=4",
+          "namespace": {
+            "name": "cert-manager",
+            "editable": false
+          },
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "gpu-operator",
+      "versions": [
+        {
+          "description": "NVIDIA GPU Operator creates/configures/manages GPUs atop Kubernetes.",
+          "icon": "https://camo.githubusercontent.com/cf2a2bd227de9bbb9d5c8dfece70859e8ad3320df1f28d86ae786af4f94ea6d7/68747470733a2f2f7777772e6e76696469612e636f6d2f636f6e74656e742f64616d2f656e2d7a7a2f536f6c7574696f6e732f446174612d43656e7465722f6567782f6e76696469612d6567782d706c6174666f726d2d676f6c642d696d6167652d66756c6c2d326335302d644032782e6a7067",
+          "namespace": {
+            "name": "gpu-operator",
+            "editable": false
+          },
+          "parameters": [
+            {
+              "name": "toolkit",
+              "path": "toolkit.version",
+              "description": "toolkit version to use",
+              "mandatory": false,
+              "default": "v1.11.0-centos7"
+            }
+          ],
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "grafana",
+      "versions": [
+        {
+          "description": "Query, visualize, alert on, and understand your data no matter where it's stored.",
+          "icon": "https://cdn.icon-icons.com/icons2/2699/PNG/512/grafana_logo_icon_171049.png",
+          "namespace": {
+            "name": "grafana",
+            "editable": true
+          },
+          "parameters": [
+            {
+              "name": "fqdn",
+              "path": "grafana.ingress.hosts[0]",
+              "description": "fqdn to contact grafana",
+              "mandatory": true
+            },
+            {
+              "name": "persistence",
+              "path": "grafana.persistence.enabled",
+              "description": "Enable persistence using Persistent Volume Claims",
+              "mandatory": false,
+              "default": "false"
+            }
+          ],
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "ingress",
+      "versions": [
+        {
+          "description": "Ingress-NGINX Controller for Kubernetes.",
+          "icon": "https://avatars.githubusercontent.com/u/8629072?s=280\u0026v=4",
+          "namespace": {
+            "name": "ingress-system",
+            "editable": false
+          },
+          "parameters": [
+            {
+              "name": "ingress-ip",
+              "path": "ingress-nginx.controller.service.loadBalancerIP",
+              "description": "Set a static IP for the ingress controller",
+              "mandatory": false,
+              "default": "10.83.4.240"
+            }
+          ],
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "kubeflow",
+      "versions": [
+        {
+          "description": "The Machine Learning Toolkit for Kubernetes.",
+          "icon": "https://user-images.githubusercontent.com/5319646/37641015-10cb00f6-2c53-11e8-9195-65f2dbc60955.jpg",
+          "namespace": {
+            "name": "kubeflow",
+            "editable": false
+          },
+          "version": "1.0.0"
+        }
+      ]
+    }
+  ]
+}

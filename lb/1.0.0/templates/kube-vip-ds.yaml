@@ -3,7 +3,7 @@ kind: DaemonSet
 metadata:
   labels:
     app.kubernetes.io/name: kube-vip-ds
-    app.kubernetes.io/version: v0.5.0
+    app.kubernetes.io/version: v0.5.5
   name: kube-vip-ds
   namespace: kube-system
 spec:
@@ -14,7 +14,7 @@ spec:
     metadata:
       labels:
         app.kubernetes.io/name: kube-vip-ds
-        app.kubernetes.io/version: v0.5.0
+        app.kubernetes.io/version: v0.5.5
     spec:
       containers:
         - args:
@@ -25,7 +25,7 @@ spec:
             - name: port
               value: "6443"
             - name: vip_interface
-              value: eth0
+              value: "{{ .Values.interface }}"
             - name: vip_cidr
               value: "32"
             - name: svc_enable
@@ -43,7 +43,7 @@ spec:
             - name: vip_address
             - name: prometheus_server
               value: :2112
-          image: ghcr.io/kube-vip/kube-vip:v0.5.0
+          image: ghcr.io/kube-vip/kube-vip:v0.5.5
           imagePullPolicy: Always
           name: kube-vip
           resources: {}

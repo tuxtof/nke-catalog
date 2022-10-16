@@ -1,0 +1,11 @@
+description: The Machine Learning Toolkit for Kubernetes.
+icon: https://user-images.githubusercontent.com/5319646/37641015-10cb00f6-2c53-11e8-9195-65f2dbc60955.jpg
+namespace:
+  name: kubeflow
+  editable: false
+parameters:
+  # - name: toolkit
+  #   path: toolkit.version
+  #   description: "toolkit version to use"
+  #   mandatory: false
+  #   default: "v1.11.0-centos7"

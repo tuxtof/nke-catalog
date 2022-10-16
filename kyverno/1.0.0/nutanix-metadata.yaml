@@ -1,0 +1,6 @@
+description: Kubernetes Native Policy Management.
+icon: https://repository-images.githubusercontent.com/169108858/35923880-823a-11e9-9089-0c9c102f9e6f
+namespace:
+  name: kyverno-system
+  editable: false
+parameters:

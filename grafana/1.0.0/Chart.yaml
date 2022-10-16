@@ -2,10 +2,10 @@ apiVersion: v2
 name: grafana
 description: NKE Grafana
 type: application
-version: 2.5.0
-appVersion: "2.5.0"
+version: 1.0.0
+appVersion: "9.1.7"
 
 dependencies:
   - name: grafana
-    version: 6.40.1
+    version: 6.40.4
     repository: https://grafana.github.io/helm-charts

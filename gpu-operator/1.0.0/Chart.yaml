@@ -1,0 +1,11 @@
+apiVersion: v2
+name: gpu-operator
+description: NKE Nvidia GPU Operator
+type: application
+version: 1.0.0
+appVersion: "v22.9.0"
+
+dependencies:
+  - name: gpu-operator
+    version: 22.9.0
+    repository: https://nvidia.github.io/gpu-operator

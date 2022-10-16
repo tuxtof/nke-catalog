@@ -1,11 +1,11 @@
-name: ingress-nginx
 description: Ingress-NGINX Controller for Kubernetes.
 icon: https://avatars.githubusercontent.com/u/8629072?s=280&v=4
 namespace:
   name: ingress-system
   editable: false
-# parameters:
-#   - name:
-#     path:
-#     description:
-#     mandatory: false
+parameters:
+  - name: ingress-ip
+    path: ingress-nginx.controller.service.loadBalancerIP
+    description: Set a static IP for the ingress controller
+    mandatory: false
+    default: "10.83.4.240"

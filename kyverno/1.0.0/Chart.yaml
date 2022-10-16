@@ -1,0 +1,11 @@
+apiVersion: v2
+name: kyverno
+description: NKE kyverno
+type: application
+version: 2.6.0
+appVersion: "1.8.0"
+
+dependencies:
+  - name: kyverno
+    version: 2.6.0
+    repository: https://kyverno.github.io/kyverno/

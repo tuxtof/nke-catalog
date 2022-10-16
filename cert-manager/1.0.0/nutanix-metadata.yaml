@@ -1,0 +1,6 @@
+description: X.509 certificate management for Kubernetes.
+icon: https://avatars.githubusercontent.com/u/39950598?s=280&v=4
+namespace:
+  name: cert-manager
+  editable: false
+parameters:
