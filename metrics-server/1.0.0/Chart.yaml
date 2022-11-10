@@ -1,0 +1,11 @@
+apiVersion: v2
+name: metrics-server
+description: NKE metrics-server
+type: application
+version: 1.0.0
+appVersion: "v0.6.1"
+
+dependencies:
+  - name: metrics-server
+    version: 3.8.2
+    repository: https://kubernetes-sigs.github.io/metrics-server/

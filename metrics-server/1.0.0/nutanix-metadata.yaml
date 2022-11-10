@@ -1,0 +1,11 @@
+description: Open-Source Enterprise-level solution to build Serverless and Event Driven Applications.
+icon: https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png
+namespace:
+  name: metrics-server
+  editable: false
+parameters:
+  - name: replicas
+    path: metrics-server.replicas
+    description: "number of metrics-server instance"
+    mandatory: false
+    default: "2"
