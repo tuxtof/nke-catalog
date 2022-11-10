@@ -1,6 +1,101 @@
 {
   "applications": [
     {
+      "name": "knative-op",
+      "versions": [
+        {
+          "description": "Open-Source Enterprise-level solution to build Serverless and Event Driven Applications.",
+          "icon": "https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png",
+          "namespace": {
+            "name": "knative-operator",
+            "editable": false
+          },
+          "parameters": [
+            {
+              "name": "domain",
+              "path": "domain",
+              "description": "base domain to use with Knative",
+              "mandatory": true
+            }
+          ],
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "kubeflow",
+      "versions": [
+        {
+          "description": "The Machine Learning Toolkit for Kubernetes.",
+          "icon": "https://user-images.githubusercontent.com/5319646/37641015-10cb00f6-2c53-11e8-9195-65f2dbc60955.jpg",
+          "namespace": {
+            "name": "kubeflow",
+            "editable": false
+          },
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "cert-manager",
+      "versions": [
+        {
+          "description": "X.509 certificate management for Kubernetes.",
+          "icon": "https://avatars.githubusercontent.com/u/39950598?s=280\u0026v=4",
+          "namespace": {
+            "name": "cert-manager",
+            "editable": false
+          },
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "knative",
+      "versions": [
+        {
+          "description": "Open-Source Enterprise-level solution to build Serverless and Event Driven Applications.",
+          "icon": "https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png",
+          "namespace": {
+            "name": "knative-serving",
+            "editable": false
+          },
+          "parameters": [
+            {
+              "name": "domain",
+              "path": "grafana.ingress.hosts[0]",
+              "description": "base domain to use with Knative",
+              "mandatory": true
+            }
+          ],
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "ingress",
+      "versions": [
+        {
+          "description": "Ingress-NGINX Controller for Kubernetes.",
+          "icon": "https://avatars.githubusercontent.com/u/8629072?s=280\u0026v=4",
+          "namespace": {
+            "name": "ingress-system",
+            "editable": false
+          },
+          "parameters": [
+            {
+              "name": "ingress-ip",
+              "path": "ingress-nginx.controller.service.loadBalancerIP",
+              "description": "Set a static IP for the ingress controller",
+              "mandatory": false,
+              "default": "10.83.4.240"
+            }
+          ],
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
       "name": "kyverno",
       "versions": [
         {
@@ -39,20 +134,6 @@
               "default": "eth0"
             }
           ],
-          "version": "1.0.0"
-        }
-      ]
-    },
-    {
-      "name": "cert-manager",
-      "versions": [
-        {
-          "description": "X.509 certificate management for Kubernetes.",
-          "icon": "https://avatars.githubusercontent.com/u/39950598?s=280\u0026v=4",
-          "namespace": {
-            "name": "cert-manager",
-            "editable": false
-          },
           "version": "1.0.0"
         }
       ]
@@ -105,43 +186,6 @@
               "default": "false"
             }
           ],
-          "version": "1.0.0"
-        }
-      ]
-    },
-    {
-      "name": "ingress",
-      "versions": [
-        {
-          "description": "Ingress-NGINX Controller for Kubernetes.",
-          "icon": "https://avatars.githubusercontent.com/u/8629072?s=280\u0026v=4",
-          "namespace": {
-            "name": "ingress-system",
-            "editable": false
-          },
-          "parameters": [
-            {
-              "name": "ingress-ip",
-              "path": "ingress-nginx.controller.service.loadBalancerIP",
-              "description": "Set a static IP for the ingress controller",
-              "mandatory": false,
-              "default": "10.83.4.240"
-            }
-          ],
-          "version": "1.0.0"
-        }
-      ]
-    },
-    {
-      "name": "kubeflow",
-      "versions": [
-        {
-          "description": "The Machine Learning Toolkit for Kubernetes.",
-          "icon": "https://user-images.githubusercontent.com/5319646/37641015-10cb00f6-2c53-11e8-9195-65f2dbc60955.jpg",
-          "namespace": {
-            "name": "kubeflow",
-            "editable": false
-          },
           "version": "1.0.0"
         }
       ]

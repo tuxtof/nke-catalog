@@ -1,0 +1,10 @@
+description: Open-Source Enterprise-level solution to build Serverless and Event Driven Applications.
+icon: https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png
+namespace:
+  name: knative-serving
+  editable: false
+parameters:
+  - name: domain
+    path: grafana.ingress.hosts[0]
+    description: "base domain to use with Knative"
+    mandatory: true

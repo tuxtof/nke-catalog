@@ -1,0 +1,6 @@
+apiVersion: v2
+name: knative
+description: NKE knative
+type: application
+version: 1.0.0
+appVersion: "v1.8.0"
