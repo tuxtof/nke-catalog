@@ -8,4 +8,4 @@ parameters:
     path: ingress-nginx.controller.service.loadBalancerIP
     description: Set a static IP for the ingress controller
     mandatory: false
-    default: "10.83.4.240"
+    default: "10.83.23.240"
