@@ -1,67 +1,15 @@
 {
   "applications": [
     {
-      "name": "kubeflow",
+      "name": "kyverno",
       "versions": [
         {
-          "description": "The Machine Learning Toolkit for Kubernetes.",
-          "icon": "https://user-images.githubusercontent.com/5319646/37641015-10cb00f6-2c53-11e8-9195-65f2dbc60955.jpg",
+          "description": "Kubernetes Native Policy Management.",
+          "icon": "https://repository-images.githubusercontent.com/169108858/35923880-823a-11e9-9089-0c9c102f9e6f",
           "namespace": {
-            "name": "kubeflow",
+            "name": "kyverno-system",
             "editable": false
           },
-          "version": "1.0.0"
-        }
-      ]
-    },
-    {
-      "name": "metrics-server",
-      "versions": [
-        {
-          "description": "Open-Source Enterprise-level solution to build Serverless and Event Driven Applications.",
-          "icon": "https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png",
-          "namespace": {
-            "name": "metrics-server",
-            "editable": false
-          },
-          "parameters": [
-            {
-              "name": "replicas",
-              "path": "metrics-server.replicas",
-              "description": "number of metrics-server instance",
-              "mandatory": false,
-              "default": "2"
-            }
-          ],
-          "version": "1.0.0"
-        }
-      ]
-    },
-    {
-      "name": "lb",
-      "versions": [
-        {
-          "description": "kube-vip provides Kubernetes clusters with a load balancer for Kubernetes Services of type LoadBalancer without relying on any external hardware or software.",
-          "icon": "https://kube-vip.io/images/kube-vip.png",
-          "namespace": {
-            "name": "kube-system",
-            "editable": false
-          },
-          "parameters": [
-            {
-              "name": "range-global",
-              "path": "rangeGlobal",
-              "description": "Range to assign IP (ex: 192.168.1.220-192.168.1.230)",
-              "mandatory": true
-            },
-            {
-              "name": "interface",
-              "path": "interface",
-              "description": "Primary interface of the name",
-              "mandatory": false,
-              "default": "eth0"
-            }
-          ],
           "version": "1.0.0"
         }
       ]
@@ -104,35 +52,6 @@
       ]
     },
     {
-      "name": "grafana",
-      "versions": [
-        {
-          "description": "Query, visualize, alert on, and understand your data no matter where it's stored.",
-          "icon": "https://cdn.icon-icons.com/icons2/2699/PNG/512/grafana_logo_icon_171049.png",
-          "namespace": {
-            "name": "grafana",
-            "editable": true
-          },
-          "parameters": [
-            {
-              "name": "fqdn",
-              "path": "grafana.ingress.hosts[0]",
-              "description": "fqdn to contact grafana",
-              "mandatory": true
-            },
-            {
-              "name": "persistence",
-              "path": "grafana.persistence.enabled",
-              "description": "Enable persistence using Persistent Volume Claims",
-              "mandatory": false,
-              "default": "false"
-            }
-          ],
-          "version": "1.0.0"
-        }
-      ]
-    },
-    {
       "name": "ingress",
       "versions": [
         {
@@ -149,28 +68,6 @@
               "description": "Set a static IP for the ingress controller",
               "mandatory": false,
               "default": "10.83.4.240"
-            }
-          ],
-          "version": "1.0.0"
-        }
-      ]
-    },
-    {
-      "name": "knative",
-      "versions": [
-        {
-          "description": "Open-Source Enterprise-level solution to build Serverless and Event Driven Applications.",
-          "icon": "https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png",
-          "namespace": {
-            "name": "knative-serving",
-            "editable": false
-          },
-          "parameters": [
-            {
-              "name": "domain",
-              "path": "grafana.ingress.hosts[0]",
-              "description": "base domain to use with Knative",
-              "mandatory": true
             }
           ],
           "version": "1.0.0"
@@ -200,15 +97,132 @@
       ]
     },
     {
-      "name": "kyverno",
+      "name": "kubeflow",
       "versions": [
         {
-          "description": "Kubernetes Native Policy Management.",
-          "icon": "https://repository-images.githubusercontent.com/169108858/35923880-823a-11e9-9089-0c9c102f9e6f",
+          "description": "The Machine Learning Toolkit for Kubernetes.",
+          "icon": "https://user-images.githubusercontent.com/5319646/37641015-10cb00f6-2c53-11e8-9195-65f2dbc60955.jpg",
           "namespace": {
-            "name": "kyverno-system",
+            "name": "kubeflow",
             "editable": false
           },
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "cilium",
+      "versions": [
+        {
+          "description": "Cilium CNI",
+          "icon": "https://camo.githubusercontent.com/cf2a2bd227de9bbb9d5c8dfece70859e8ad3320df1f28d86ae786af4f94ea6d7/68747470733a2f2f7777772e6e76696469612e636f6d2f636f6e74656e742f64616d2f656e2d7a7a2f536f6c7574696f6e732f446174612d43656e7465722f6567782f6e76696469612d6567782d706c6174666f726d2d676f6c642d696d6167652d66756c6c2d326335302d644032782e6a7067",
+          "namespace": {
+            "name": "kube-system",
+            "editable": false
+          },
+          "version": "1.13.0"
+        }
+      ]
+    },
+    {
+      "name": "grafana",
+      "versions": [
+        {
+          "description": "Query, visualize, alert on, and understand your data no matter where it's stored.",
+          "icon": "https://cdn.icon-icons.com/icons2/2699/PNG/512/grafana_logo_icon_171049.png",
+          "namespace": {
+            "name": "grafana",
+            "editable": true
+          },
+          "parameters": [
+            {
+              "name": "fqdn",
+              "path": "grafana.ingress.hosts[0]",
+              "description": "fqdn to contact grafana",
+              "mandatory": true
+            },
+            {
+              "name": "persistence",
+              "path": "grafana.persistence.enabled",
+              "description": "Enable persistence using Persistent Volume Claims",
+              "mandatory": false,
+              "default": "false"
+            }
+          ],
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "knative",
+      "versions": [
+        {
+          "description": "Open-Source Enterprise-level solution to build Serverless and Event Driven Applications.",
+          "icon": "https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png",
+          "namespace": {
+            "name": "knative-serving",
+            "editable": false
+          },
+          "parameters": [
+            {
+              "name": "domain",
+              "path": "grafana.ingress.hosts[0]",
+              "description": "base domain to use with Knative",
+              "mandatory": true
+            }
+          ],
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "lb",
+      "versions": [
+        {
+          "description": "kube-vip provides Kubernetes clusters with a load balancer for Kubernetes Services of type LoadBalancer without relying on any external hardware or software.",
+          "icon": "https://kube-vip.io/images/kube-vip.png",
+          "namespace": {
+            "name": "kube-system",
+            "editable": false
+          },
+          "parameters": [
+            {
+              "name": "range-global",
+              "path": "rangeGlobal",
+              "description": "Range to assign IP (ex: 192.168.1.220-192.168.1.230)",
+              "mandatory": true
+            },
+            {
+              "name": "interface",
+              "path": "interface",
+              "description": "Primary interface of the name",
+              "mandatory": false,
+              "default": "eth0"
+            }
+          ],
+          "version": "1.0.0"
+        }
+      ]
+    },
+    {
+      "name": "metrics-server",
+      "versions": [
+        {
+          "description": "Open-Source Enterprise-level solution to build Serverless and Event Driven Applications.",
+          "icon": "https://knative.dev/docs/images/logo/rgb/knative-logo-rgb.png",
+          "namespace": {
+            "name": "metrics-server",
+            "editable": false
+          },
+          "parameters": [
+            {
+              "name": "replicas",
+              "path": "metrics-server.replicas",
+              "description": "number of metrics-server instance",
+              "mandatory": false,
+              "default": "2"
+            }
+          ],
           "version": "1.0.0"
         }
       ]
